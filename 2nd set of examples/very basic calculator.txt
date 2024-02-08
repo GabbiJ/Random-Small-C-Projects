@@ -1,0 +1,42 @@
+//simple calculator
+#include <stdio.h>
+
+int main() 
+{
+    int x, y;
+    char op;
+    
+    printf("Operator:\n");
+    scanf("%c",&op);
+    
+    printf("First number:\n");
+    scanf("%i",&x);
+    
+    printf("Second number:\n");
+    scanf("%i",&y);
+    
+    switch(op)
+    {
+        case '+':
+        printf("%i + %i = %i", x, y, x + y);
+        return 0;
+        break;
+        
+        case '-':
+        printf("%i - %i = %i", x, y, x - y);
+        return 0;
+        break;
+        
+        case '*':
+        printf("%i * %i = %i", x, y, x * y);
+        return 0;
+        break;
+        
+        case '/':
+        printf("%i / %i = %i", x, y, x / y);
+        return 0;
+        break;
+    }
+    printf("Error invalid operator.");
+    return 1;
+}

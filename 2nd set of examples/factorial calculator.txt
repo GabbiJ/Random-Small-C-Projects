@@ -1,0 +1,29 @@
+// factorial of given number
+#include <stdio.h>
+
+int main() 
+{
+    int n;
+    unsigned int ans = 1;
+    
+    printf("Number:");
+    scanf("%i", &n);
+    
+    //if 0 is given
+    if(n == 0)
+    {
+        ans = 0;
+    }
+    
+    else
+    {
+    for(int i = 1; i <= n; i++)
+    {
+       ans *= i; 
+    }
+    }
+    
+    printf("Answer: %i", ans);
+    
+    return 0;
+}

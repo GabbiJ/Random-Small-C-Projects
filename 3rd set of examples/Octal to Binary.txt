@@ -1,0 +1,49 @@
+// Octal to Binary
+#include <stdio.h>
+#include <math.h>
+
+long long int OcttoBi(int x);
+
+int main() 
+{
+    int num;
+    
+   printf("Octal Number:");
+   scanf("%i",&num);
+   
+   printf("Octal Number: %i = Binary Number: %lli", num, OcttoBi(num));
+
+    return 0;
+}
+
+long long int OcttoBi(int x)
+{
+    int ans = 0, sdigit, count = 0, y = x, rem = 0;
+    long long int finalans = 0;
+    // convert Octal to Decimal
+    while(x != 0)
+    {
+        sdigit = x % 10;
+        x /= 10;
+        
+        ans += sdigit * pow(8, count);
+        
+        count++;
+    }
+    //Decimal to Binary
+    count = 0;
+    while (ans > 0)
+    {
+        rem = ans % 2;
+        ans /= 2;
+        
+        for(int i = 0; i < count; i++)
+        {
+            rem *= 10; 
+        }
+        
+        finalans += rem;
+        count++;
+    }
+    return finalans;
+}

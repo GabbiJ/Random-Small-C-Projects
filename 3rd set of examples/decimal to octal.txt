@@ -1,0 +1,40 @@
+//convert decimal to octal
+
+#include <stdio.h>
+#include <math.h>
+long int dectooct(int x);
+
+int main() 
+{
+    int num;  
+    long int ans;
+    
+    printf("Decimal number:");
+    scanf("%i", &num);
+    
+    printf("Decimal: %i = Octal: %li",num, dectooct(num));
+    
+    return 0;
+}
+
+long int dectooct(int x)
+{
+    int count = 0, ans = 0, rem;
+    
+    while(x > 0)
+    {
+        rem = x % 8;
+        x /= 8;
+        
+        for(int i = 0; i < count; i++)
+        {
+            rem *= 10;
+        }
+        
+        ans += rem;
+        
+        count++;
+    }
+    
+    return ans;
+}

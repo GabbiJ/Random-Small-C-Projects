@@ -1,0 +1,22 @@
+//fcheck if char is in alphabet
+#include <stdio.h>
+
+int main() 
+{
+    char c;
+    
+    printf("character:");
+    
+    scanf("%c", &c);
+    
+    if(c >= 65 && c <= 90 || c >= 97 && c <= 122)
+    {
+        printf("Character is in alphabet.");
+        return 0;
+    }
+    else
+    {
+        printf("Character not in alpabet.");
+        return 0;
+    }
+}

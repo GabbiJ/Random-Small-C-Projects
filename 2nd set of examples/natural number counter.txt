@@ -1,0 +1,22 @@
+// count digits of an int
+#include <stdio.h>
+
+int main() 
+{
+   unsigned long long int x;
+   int digits = 1;
+    
+    printf("Give number:\n");
+    scanf("%lli", &x);
+    
+    do
+    {
+     x /= 10;
+     digits ++;
+    }while((x / 10) >= 1);
+    
+    
+    printf("Digits = %i\n", digits);
+    
+    return 0;
+}

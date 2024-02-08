@@ -1,0 +1,22 @@
+// sum of natural numbers
+#include <stdio.h>
+
+int main() 
+{
+    int total = 0;
+    char end;
+    
+    while(end != 'e')
+    {
+    printf("Number:\n");
+    
+    int n;
+    scanf("%i", &n);
+    
+    total = total + n;
+    
+    printf("Answer = %i\n", total);
+    
+    }
+    return 0;  
+}

@@ -1,0 +1,25 @@
+// Find HCF of 2 numbers
+#include <stdio.h>
+
+int main() 
+{
+   int x, y, HCF;
+    
+    printf("Give first number:\n");
+    scanf("%i", &x);
+    
+    printf("Give second number:\n");
+    scanf("%i", &y);
+    
+    for(int i = 1; i <= x && i <= y; i++)
+    {
+        if(x % i == 0 && y % i == 0)
+        {
+            HCF = i;
+        }
+    }
+    
+    printf("HCF = %i\n", HCF);
+    
+    return 0;
+}

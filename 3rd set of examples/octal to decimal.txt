@@ -1,0 +1,36 @@
+//convert octal to decimal
+
+#include <stdio.h>
+#include <math.h>
+int octtodec(long int x);
+
+int main() 
+{
+    long int num;  
+    int ans;
+    
+    printf("Octal number:");
+    scanf("%li", &num);
+    
+    printf("Octal: %li = Decimal:%i",num, octtodec(num));
+    
+    return 0;
+}
+
+int octtodec(long int x)
+{
+    int digit, count = 0, ans = 0;
+    while (x != 0)
+    {
+        //to get single digit
+        digit = x % 10;
+        x /= 10;
+        //actual conversion
+        ans += digit * pow(8, count);
+        
+        
+        count++;
+    }
+    
+    return ans;
+}

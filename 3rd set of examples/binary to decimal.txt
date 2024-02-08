@@ -1,0 +1,39 @@
+//convert binary to decimal
+
+#include <stdio.h>
+#include <math.h>
+int bitodec(int x);
+
+int main() 
+{
+    long int num,  ans;
+    
+    printf("Binary number:");
+    scanf("%i", &num);
+    
+    printf("Binary: %i = Decimal :%i",num, bitodec(num));
+    
+    return 0;
+}
+
+int bitodec(int x)
+{
+    int count = 0, ans = 0;
+    
+    while(x != 0)
+    {
+        //actual conversion from bi to dec
+        if(x % 10 == 0)
+        {
+           count++; 
+        }
+        else if(x % 10 == 1)
+        {
+            ans += pow(2, count);
+            count++;
+        }
+        //counting digits
+        x /= 10;
+    }
+    return ans;
+}

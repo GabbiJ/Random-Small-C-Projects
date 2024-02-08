@@ -1,0 +1,36 @@
+//finding leap years
+#include <stdio.h>
+
+int main() 
+{
+    int year;
+    printf("Year:");
+    scanf("%i", &year);
+    
+    if(year%100 == 0)
+    {
+        if(year%400 == 0)
+        {
+            printf("The year is a leap year.");
+            return 0;
+        }
+        else
+        {
+            printf("The year is not a leap year.");
+            return 0;
+        }
+    }
+    else
+    {
+        if(year%4 == 0)
+        {
+            printf("The year is a leap year.");
+            return 0;
+        }
+        else
+        {
+            printf("The year is not a leap year.");
+            return 0;
+        }
+    }
+}

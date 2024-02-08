@@ -1,0 +1,22 @@
+// display factors of a num
+#include <stdio.h>
+
+int main() 
+{
+    int x;
+    
+    printf("Number: \n");
+    scanf("%i", &x);
+   
+   printf("Factors of %i:\n", x);
+   
+   for(int i = 1; i <= x; i++)
+   {
+       if(x % i == 0)
+       {
+           printf("%i, ",i);
+       }
+   }
+   
+   return 0;
+}

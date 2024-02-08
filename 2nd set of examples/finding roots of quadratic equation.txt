@@ -1,0 +1,77 @@
+//find roots of quadratic equation
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+   double a, b,c, discr, root1, root2;
+   
+   printf("a:\n");
+   scanf("%lf", &a);
+   if (a == 0)
+   {
+       printf("a cannot equal 0.\n");
+    //find roots of quadratic equation
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+   double a, b,c, discr, root1, root2;
+   
+   //getting a, b & c
+   printf("a:\n");
+   scanf("%lf", &a);
+   if (a == 0)
+   {
+       printf("a cannot equal 0.\n");
+       return 1;
+   }
+  
+   printf("b:\n");
+   scanf("%lf", &b);
+   
+   printf("c:\n");
+   scanf("%lf", &c);
+   
+   //calculating discriminant
+    discr = (b * b) - (4 * a * c);
+    
+    printf("discriminant is: %lf. \n", discr);
+    
+    //calculating roots
+    if (discr > 0)
+    {
+        root1 = (-1 * b) + sqrt((b * b) - (4 * a * c))/ (2 * a);
+        root2 = (-1 * b) - sqrt((b * b) - (4 * a * c))/ (2 * a);
+    }
+    
+    else if (discr < 0)
+    {
+        double realp, imap;
+        //real part
+        realp = (-1 * b)/ (2 * a);
+        //imaginary part
+        imap = sqrt(-1 * ((b*b) - (4 * a * c)))/ (2*a);
+        //final roots
+        printf("root1: %lf+%lfi \n",realp, imap);
+        printf("root2: %lf-%lfi \n", realp, imap);
+        
+        return 0;
+    }
+    
+    else if (discr == 0)
+    {
+        root1 = (-1 * b)/ (2 * a);
+        root2 = root1;
+    }
+    
+    else
+    {
+        printf("idk wtf happened...");
+        return 1;
+    }
+   
+   printf("root1: %lf \nroot2: %lf \n",root1, root2);
+   return 0;
+}

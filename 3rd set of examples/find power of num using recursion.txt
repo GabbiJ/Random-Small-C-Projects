@@ -1,0 +1,36 @@
+//find power of numbers using recursion
+
+#include <stdio.h>
+int powerof(int x, int powr);
+
+int main() 
+{
+    int num, powrm, ans;
+    
+    printf("Number:");
+    scanf("%i", &num);
+    
+    printf("Power:");
+    scanf("%i", &powrm);
+    
+    printf("%i^%i = %i",num, powrm, powerof(num, powrm));
+    
+    return 0;
+}
+
+int powerof(int x, int powr)
+{
+    unsigned int ans = x;
+    
+    if(x == 0 || x == 1)
+    {
+    return x;
+    }
+    
+    if(powr > 1)
+    {
+        ans *= powerof(x, powr - 1);
+    }
+    
+    return ans;
+}

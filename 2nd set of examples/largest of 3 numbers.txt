@@ -1,0 +1,27 @@
+//find largest number out of 3
+#include <stdio.h>
+
+int main() 
+{
+    int no1, no2, no3, biggestno;
+    
+    printf("Give 3 numbers:\n");
+    
+    scanf("%i", &no1);
+    scanf("%i", &no2);
+    scanf("%i", &no3);
+    
+    biggestno = no1;
+    
+    if(no2 > biggestno)
+    {
+        biggestno = no2;
+    }
+    else if(no3 > biggestno)
+    {
+        biggestno = no3;
+    }
+    
+    printf("Biggest number: %i\n", biggestno);
+
+}

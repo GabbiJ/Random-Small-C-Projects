@@ -1,0 +1,40 @@
+//convert decimal to binary
+
+#include <stdio.h>
+#include <math.h>
+long long int dectobi(int x);
+
+int main() 
+{
+    int num,  ans;
+    
+    printf("Decimal number:");
+    scanf("%i", &num);
+    
+    printf("Decimal: %i = Binary :%lli",num, dectobi(num));
+    
+    return 0;
+}
+
+long long int dectobi(int x)
+{
+    //get number 
+    int count = 0, rem;
+    long long int ans = 0;
+    while(x > 0)
+    {
+        rem = x % 2;
+        x /= 2;
+        
+        //position the rem
+        for(int i = 0; i < count; i++)
+        {
+            rem *= 10;
+        }
+        //add to answer
+        ans += rem; 
+        
+        count++;
+    }
+    return ans;
+}

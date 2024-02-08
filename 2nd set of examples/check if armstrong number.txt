@@ -1,0 +1,61 @@
+// check armstrong number
+#include <stdio.h>
+
+int main() 
+{
+    int x, digits = 0, newx, y = 0, sdigit;
+    
+    printf("Number:\n");
+    scanf("%i", &x);
+    
+    newx = x;
+    //check amount of digits 
+    
+    do
+    {
+        newx /= 10;
+        digits++;
+    } while(newx >= 1);
+    
+    newx = x;
+    
+    //finding individual numbers
+    do
+    {
+        sdigit = newx % 10;
+        
+       int tempnum = 1;
+   
+        for(int i = 1; i <= digits; i++) 
+        {
+            tempnum *= sdigit;
+            
+            if(i == digits)
+            {
+                printf("%i ", sdigit);
+            }
+            else
+            {
+            printf("%i * ", sdigit);
+            }
+        }
+        
+        printf("= %i \n", tempnum);
+   
+        y += tempnum;
+        
+        newx /= 10;
+    } while(newx > 0);
+   
+   if(y == x)
+   {
+      printf("Number is an armstrong number."); 
+      return 0;
+   }
+   else
+   {
+       printf("Number is not an armstrong number.");
+       return 0;
+   }
+   
+}

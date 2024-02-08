@@ -1,0 +1,36 @@
+// check number is prime
+#include <stdio.h>
+
+int main() 
+{
+    unsigned int x, count = 0;
+    
+    printf("Number:\n");
+    scanf("%i", &x);
+    
+    if(x == 1 || x == 0)
+    {
+        printf("The number is not prime.");
+        return 0;
+    }
+    
+    for(int i = 1; i <= x; i++)
+    {
+        if(x % i == 0)
+        {
+            count++;
+        }
+    }
+    
+    if(count > 2)
+    {
+        printf("The number is not prime.");
+        return 0;
+    }
+    
+    else if(count <= 2)
+    {
+        printf("The number is prime.");
+        return 0;
+    }
+}
